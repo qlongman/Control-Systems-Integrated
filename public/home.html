@@ -32,26 +32,23 @@
     main {
       padding: 2em;
     }
+    .service-section {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 2em;
+    }
+    .service {
+      text-align: center;
+      max-width: 300px;
+    }
+    .service img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
   </style>
-.service-section {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 2em;
-}
-
-.service {
-  text-align: center;
-  max-width: 300px;
-}
-
-.service img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin: 10px 0;
-}
-
 </head>
 <body>
   <header>
@@ -65,33 +62,34 @@
   </nav>
 
   <main>
-  <h2>Welcome to Our Website</h2>
-  <p>
-    We specialize in control systems engineering and automation integration.
-    Our mission is to provide efficient, scalable, and intelligent control solutions
-    for industrial and commercial applications.
-  </p>
+    <h2>Welcome to Our Website</h2>
+    <p>
+      We specialize in control systems engineering and automation integration.
+      Our mission is to provide efficient, scalable, and intelligent control solutions
+      for industrial and commercial applications.
+    </p>
 
-  <h3>Our Services</h3>
-  <ul>
-    <li>PLC Programming</li>
-    <li>SCADA Integration</li>
-    <li>Industrial Networking</li>
-    <li>System Maintenance & Support</li>
-  </ul>
+    <h3>Our Services</h3>
+    <ul>
+      <li>PLC Programming</li>
+      <li>SCADA Integration</li>
+      <li>Industrial Networking</li>
+      <li>System Maintenance & Support</li>
+    </ul>
 
-  <div class="service-section">
-    <div class="service">
-      <h4>Test and Tag</h4>
-      <img src="/Images/test-and-tag.png" alt="Test and Tag" />
-      <p>Certified electrical testing and tagging to ensure workplace safety and compliance.</p>
+    <div class="service-section">
+      <div class="service">
+        <h4>Test and Tag</h4>
+        <img src="Images/test-and-tag.png" alt="Test and Tag" />
+        <p>Certified electrical testing and tagging to ensure workplace safety and compliance.</p>
+      </div>
+
+      <div class="service">
+        <h4>Instrumentation Calibration</h4>
+        <img src="Images/instrumentation-calibration.png" alt="Instrumentation Calibration" />
+        <p>Accurate calibration of pressure, temperature, and flow instruments for industrial systems.</p>
+      </div>
     </div>
-
-    <div class="service">
-      <h4>Instrumentation Calibration</h4>
-      <img src="/Images/instrumentation-calibration.png" alt="Instrumentation Calibration" />
-      <p>Accurate calibration of pressure, temperature, and flow instruments for industrial systems.</p>
-    </div>
-  </div>
-</main>
-
+  </main>
+</body>
+</html>
