@@ -1,6 +1,4 @@
 const path = require('path');
-app.use(express.static(path.join(__dirname, 'public')));
-
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
@@ -12,6 +10,10 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+// Serve static files from the public folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Handle form submission
 app.post('/api/contact', async (req, res) => {
   const { name, email, business, message } = req.body;
 
@@ -44,19 +46,11 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+// Serve index.html on GET /
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-{
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.5.0",
-    "express": "^5.1.0",
-    "nodemailer": "^7.0.3"
-  }
-}
-
+app.listen(PORT, () => {
+  console.log(`💌 Server running at http://localhost:${PORT}`);
+});
